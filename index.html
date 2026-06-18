@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Signature Scent | Luxury Perfume Boutique</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+:root{
+--gold:#C9A227;
+--light:#faf8f3;
+--white:#ffffff;
+--dark:#222222;
+--shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:var(--light);
+color:var(--dark);
+overflow-x:hidden;
+}
+
+header{
+position:flex;
+top:0;
+left:0;
+width:100%;
+background:rgb(245, 245, 220);
+backdrop-filter:blur(15px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+z-index:999;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+height:55px;
+}
+
+.logo h2{
+font-family:'Cormorant Garamond',serif;
+font-size:34px;
+color:var(--gold);
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+margin-left:30px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--gold);
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,.35)),
+url('https://private-user-images.githubusercontent.com/259615242/608456933-0e7cfa1e-199c-406f-aea8-f0ebdf0aba11.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODE2Njk0MTYsIm5iZiI6MTc4MTY2OTExNiwicGF0aCI6Ii8yNTk2MTUyNDIvNjA4NDU2OTMzLTBlN2NmYTFlLTE5OWMtNDA2Zi1hZWE4LWYwZWJkZjBhYmExMS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNjE3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDYxN1QwNDA1MTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wZmQxZDhhNGU0NDBiNGU0ZGFlMTk5NzYzZWFkOWRiMTI0YWI2ZmVlYzlmNWYzNzMyNjg3ZjJmN2ZlM2JjNTc5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.Z5XxqMdozcqpK7MYWPDc3gKm2pq3x6rqlesSy4IbNXI');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+
+.hero-content h1{
+font-size:85px;
+font-family:'Cormorant Garamond',serif;
+color:gold;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:20px;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:var(--gold);
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+margin:10px;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+.section{
+padding:100px 8%;
+}
+
+.title{
+text-align:center;
+font-size:55px;
+font-family:'Cormorant Garamond',serif;
+color:var(--gold);
+margin-bottom:50px;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+box-shadow:var(--shadow);
+}
+
+.about p{
+font-size:17px;
+line-height:1.9;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:40px 25px;
+border-radius:20px;
+text-align:center;
+box-shadow:var(--shadow);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:var(--gold);
+margin-bottom:15px;
+font-size:24px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:18px;
+box-shadow:var(--shadow);
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.04);
+}
+
+.contact{
+background:white;
+padding:60px;
+border-radius:30px;
+box-shadow:var(--shadow);
+text-align:center;
+}
+
+.contact h3{
+font-size:35px;
+margin-bottom:25px;
+color:var(--gold);
+}
+
+.contact p{
+font-size:18px;
+margin:15px 0;
+}
+
+.contact a{
+color:var(--gold);
+text-decoration:none;
+font-weight:600;
+}
+
+footer{
+background:#fff;
+padding:30px;
+text-align:center;
+margin-top:50px;
+}
+
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+background:#25D366;
+color:white;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+z-index:999;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:60px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+
+.title{
+font-size:40px;
+}
+
+.hero-content{
+padding:30px;
+}
+
+.social-icons a{
+color:gold;
+font-size:35px;
+margin-right:20px;
+transition:.3s;
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Signature Scent</h1>
+
+<h3>The Unseen Signature of Style</h3>
+
+</div>
+
+</section>
+
+<section class="section" id="about">
+
+<h2 class="title">About Signature Scent</h2>
+
+<div class="about">
+
+<div>
+
+<p> 
+At Signature Scent, we believe every fragrance tells a story.
+Our carefully curated collection includes premium imported perfumes,
+luxury Arabic fragrances, exclusive attars and elegant gift sets.
+</p>
+
+<br>
+
+<p>
+Experience a world of sophistication where every scent becomes
+your personal signature.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section" id="gallery">
+
+<h2 class="title">Store Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://private-user-images.githubusercontent.com/259615242/608456938-5df1507f-e146-437b-add7-3658684117be.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODE2MDE2NDUsIm5iZiI6MTc4MTYwMTM0NSwicGF0aCI6Ii8yNTk2MTUyNDIvNjA4NDU2OTM4LTVkZjE1MDdmLWUxNDYtNDM3Yi1hZGQ3LTM2NTg2ODQxMTdiZS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNjE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDYxNlQwOTE1NDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iMDViYjU4NDAwNjhjMmYzZGE2MWM3N2Q3NjBiNWM4MzU3NTdmYWMyMzRjNDQxZjE4NjQ4OGYwODg2YzhlNGZjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.vyk5y2T5DhVQ112pSvZwFGJLWkfvcYZTKPpLxkfVFWA">
+
+<img src="https://private-user-images.githubusercontent.com/259615242/608456936-fec15674-d7f9-4289-8df2-ddf3a71287b8.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODE2MDE2NDUsIm5iZiI6MTc4MTYwMTM0NSwicGF0aCI6Ii8yNTk2MTUyNDIvNjA4NDU2OTM2LWZlYzE1Njc0LWQ3ZjktNDI4OS04ZGYyLWRkZjNhNzEyODdiOC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNjE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDYxNlQwOTE1NDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wMTczMDNkOWMxNWUzOWM0MTg3NzRlYTU3ZmIyNGZjM2U2MjQyZjlhZDg1NjAyZGU2NzIyZTRmNWU2MTY3N2U5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.PjdIu8w2eurOwOddIgj0Ypq8b9TOd_7iA9AErQkYdHo">
+
+<img src="https://private-user-images.githubusercontent.com/259615242/608456935-287368db-ed15-4d93-aec1-f7d88ccee065.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODE2MDE2NDUsIm5iZiI6MTc4MTYwMTM0NSwicGF0aCI6Ii8yNTk2MTUyNDIvNjA4NDU2OTM1LTI4NzM2OGRiLWVkMTUtNGQ5My1hZWMxLWY3ZDg4Y2NlZTA2NS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNjE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDYxNlQwOTE1NDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00MzJmN2UxNDE2MDVhZDRiYmY4OTYxZTMyZjEyY2Y0M2QwZDgwZDQwOWYxNGE2MTY1MTgwNmJiYjg5N2NjZDA0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.pGhGm6AGL0dXaWGpiJM17aXP7wgodbcD__5VayUMQcE">
+
+<img src="https://private-user-images.githubusercontent.com/259615242/608456934-7a9fdbaf-40ba-4d95-8b0a-30f9956e1db6.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODE2MDE2NDUsIm5iZiI6MTc4MTYwMTM0NSwicGF0aCI6Ii8yNTk2MTUyNDIvNjA4NDU2OTM0LTdhOWZkYmFmLTQwYmEtNGQ5NS04YjBhLTMwZjk5NTZlMWRiNi5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNjE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDYxNlQwOTE1NDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hZDFkMjRiMWM4MDU2YWFlMDQ5NWFlZTAwNDYwZGRlNmNlNDA3N2E4ZTAzNTBhNTYxMDFmYTllZjI4MGU1NDNmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.jg7fZzSLuKI4J1CxRbr7avzfwcw_GcqnY-2cy-Kv1m0">
+
+<img src="https://private-user-images.githubusercontent.com/259615242/608456933-0e7cfa1e-199c-406f-aea8-f0ebdf0aba11.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODE2MDE2NDUsIm5iZiI6MTc4MTYwMTM0NSwicGF0aCI6Ii8yNTk2MTUyNDIvNjA4NDU2OTMzLTBlN2NmYTFlLTE5OWMtNDA2Zi1hZWE4LWYwZWJkZjBhYmExMS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNjE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDYxNlQwOTE1NDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04YThiMjNmOGMzMzczOTk2YmQ2OTlhYTQzODk3NjJjYzU1Y2Y2NzEwNmExMjhlY2M0MDBiNjc5YTU1YzA4MTU4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.oaDx4tgzYbXC54orIDEJUgoNbMOp5rFlbZudUxHR6pA">
+
+</div>
+
+</section>
+
+<section class="section" id="products">
+
+<h2 class="title">Our Collections</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://private-user-images.githubusercontent.com/259615242/608480621-7e4c9d1b-a177-43ad-bf2d-572a6fa18a71.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODE2MDM5NTMsIm5iZiI6MTc4MTYwMzY1MywicGF0aCI6Ii8yNTk2MTUyNDIvNjA4NDgwNjIxLTdlNGM5ZDFiLWExNzctNDNhZC1iZjJkLTU3MmE2ZmExOGE3MS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNjE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDYxNlQwOTU0MTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zNGRiOGYyYzE1NTJhYWVhNzQ4ZDhlNGU4MDcxMTE5NmNmZTI3OWE2M2ZmNDgyZDViM2QzNzIyMWY2NWIwNTYyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.SmSVMHkC86HccjR7wIlGMSQAMnMKDvlYiiQlo4FfJGk" style="width: 300px; height: auto; border-radius: 8px;">
+<h3>Imported Perfumes</h3>
+<p>Premium international fragrance brands.</p>
+</div>
+
+<div class="card">
+<img src="https://private-user-images.githubusercontent.com/259615242/608480606-c43fa3d8-e2d9-4616-a57f-8c036876610e.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODE2MDQzMjEsIm5iZiI6MTc4MTYwNDAyMSwicGF0aCI6Ii8yNTk2MTUyNDIvNjA4NDgwNjA2LWM0M2ZhM2Q4LWUyZDktNDYxNi1hNTdmLThjMDM2ODc2NjEwZS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNjE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDYxNlQxMDAwMjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jYjE0ZjZhYTQxMDIxNDIxMDZhOWM5NjlhNmNlOGQ0MjUzOWMyNmU3MjBhZDQ0YTNiMzEyNmI5N2EwYmUxYTI3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.cFysmKS8aOJjq5A1D8nxC_wTLmmIk0bsOMYjsK1GpXM" style="width: 300px; height: auto; border-radius: 8px;">
+
+<h3>Arabic Fragrances</h3>
+<p>Rich, luxurious and long-lasting scents.</p>
+</div>
+
+<div class="card">
+<img src="https://private-user-images.githubusercontent.com/259615242/608480607-751eb639-e9ba-4e18-b0ef-af559fe48b49.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODE2MDQzMjEsIm5iZiI6MTc4MTYwNDAyMSwicGF0aCI6Ii8yNTk2MTUyNDIvNjA4NDgwNjA3LTc1MWViNjM5LWU5YmEtNGUxOC1iMGVmLWFmNTU5ZmU0OGI0OS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNjE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDYxNlQxMDAwMjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05MDdhODlkYjdlZjI0ZTY1YmU3MjgyMjVjMjM1NTdhYTU5NWUyZDc3ZTdiZmE4NTFlYjg1MWMxYzc0Y2RjNDA2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.4zQxX_H4Bd3_XzVbQzHWWSEkomYi4jx5LDlKo0L8IaA" style="width: 300px; height: auto; border-radius: 8px;">
+
+<h3>Attars</h3>
+<p>Traditional alcohol-free perfume oils.</p>
+</div>
+
+<div class="card">
+<img src="https://private-user-images.githubusercontent.com/259615242/608487723-6c5f3743-333f-4e9a-84cb-4769f422d24d.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODE2MDQ2MDMsIm5iZiI6MTc4MTYwNDMwMywicGF0aCI6Ii8yNTk2MTUyNDIvNjA4NDg3NzIzLTZjNWYzNzQzLTMzM2YtNGU5YS04NGNiLTQ3NjlmNDIyZDI0ZC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNjE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDYxNlQxMDA1MDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mNjBiMDgxMTcyZmRkNzViMTliZDkxYzQzZWNhYTUxNTViZTViYWMzNDViYWNlMzc1M2IwZDc3YWI2YzFhNDM3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.G1-tNpSWWxl47FWh7Ck8lM4TbtJ_Cbl_xQzZAWGopqk" style="width: 300px; height: auto; border-radius: 8px;">
+
+<h3>Deodorants</h3>
+<p>Freshness and fragrance all day long.</p>
+</div>
+
+<div class="card">
+<h3>Gift Sets</h3>
+<p>Elegant gifting options for every occasion.</p>
+</div>
+
+
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<div class="contact">
+
+<h3>Visit Signature Scent</h3>
+
+<p><strong>Phone:</strong> 78599 97293</p>
+
+<p>
+<strong>WhatsApp:</strong>
+<a href="https://wa.me/917859997293">
+Chat with Us
+</a>
+</p>
+
+<p>
+Shop No. 17, Shree Sarjuu Idyllic,<br>
+Near Podar School Lane,<br>
+New CG Road, Chandkheda,<br>
+Ahmedabad, Gujarat 382424
+</p>
+
+<br>
+
+<div class="social-icons">
+
+<a href="https://maps.app.goo.gl/yRqtJSo6xK8dtgiFA?g_st=ac">
+<i class="fas fa-map-marker-alt"></i>
+</a>
+
+<a href="https://www.instagram.com/signaturrescent?igsh=b2hnemU3bzZ5aHA0"><i class="fab fa-instagram"></i></a>
+
+<a href="tel:+917859997293">
+<i class="fa fa-phone"></i></a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Signature Scent •
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/917859997293">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
