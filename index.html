@@ -35,11 +35,11 @@ overflow-x:hidden;
 }
 
 header{
-position:flex;
+position:fixed;
 top:0;
 left:0;
 width:100%;
-background:rgb(245, 245, 220);
+background:rgb(245, 245, 245);
 backdrop-filter:blur(15px);
 display:flex;
 justify-content:space-between;
@@ -50,9 +50,10 @@ box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:12px;
+font-size:2rem;
+font-weight:700;
+color:var(--gold);
+letter-spacing:3px;
 }
 
 .logo img{
@@ -280,7 +281,10 @@ transition:.3s;
 </head>
 <body>
 
+<header>
+<div class="logo">Signature</div>
 
+</header>
 
 <section class="hero">
 
